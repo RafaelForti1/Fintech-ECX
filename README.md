@@ -1,106 +1,72 @@
 # 🏦 Ecx Wallet
 
-**Ecx Wallet** is a modern, full-stack Fintech application designed to simulate a comprehensive digital wallet experience. Built with **Ruby on Rails** (API Mode) and **Vue.js 3**, it demonstrates enterprise-grade architecture, secure financial transactions, and a reactive user interface.
-
-![Project Status](https://img.shields.io/badge/status-active-success.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+**Ecx Wallet** é uma aplicação **Fintech Full-Stack** desenvolvida para simular uma carteira digital completa. O projeto demonstra a criação de um sistema financeiro robusto, seguro e escalável, utilizando as melhores práticas de engenharia de software modernas.
 
 ---
 
-## 🚀 Features
+## 🚀 Skills & Tecnologias
 
-### 🔐 Authentication & Security
-- **JWT Authentication:** Secure stateless authentication using `devise-jwt`.
-- **Role-Based Access:** Support for User and Admin roles.
-- **Route Guarding:** Frontend protection for authenticated routes.
+Este projeto foi construído para demonstrar domínio nas seguintes tecnologias e conceitos:
 
-### 💸 Core Financial Operations
-- **Account Management:** Automatic account creation upon registration.
-- **Transactions:** 
-  - Deposits
-  - Withdrawals
-  - **P2P Transfers:** Secure transfers between users via email.
-- **ACID Compliance:** Uses database transactions to guarantee data integrity during financial operations.
+### **Backend (Ruby on Rails API)**
+*   **Framework:** Ruby on Rails 7 (Modo API)
+*   **Banco de Dados:** PostgreSQL 15
+*   **Autenticação:** JWT (Stateless) com Devise
+*   **Arquitetura:** Service Objects (Regras de negócio isoladas)
+*   **Integridade de Dados:** Transações ACID para operações financeiras
+*   **Testes:** RSpec
 
-### 📊 Interactive Dashboard
-- **Real-time Overview:** Total balance and quick actions.
-- **Money Flow Chart:** Visual breakdown of income vs. expenses using `Chart.js`.
-- **Activity Log:** Searchable and filterable transaction history.
-- **Card Management:** Visual interface for managing virtual/physical cards.
+### **Frontend (Vue.js)**
+*   **Framework:** Vue.js 3 (Composition API)
+*   **Linguagem:** TypeScript
+*   **Estado Global:** Pinia
+*   **Estilização:** Tailwind CSS
+*   **Build Tool:** Vite
+*   **Visualização de Dados:** Chart.js
 
----
-
-## 🛠️ Tech Stack
-
-### Backend (API)
-- **Framework:** Ruby on Rails 7 (API Mode)
-- **Database:** PostgreSQL 15
-- **Authentication:** Devise + JWT
-- **Architecture:** Service Objects for business logic isolation.
-- **Testing:** RSpec (configured).
-
-### Frontend (Client)
-- **Framework:** Vue.js 3 (Composition API)
-- **Language:** TypeScript
-- **State Management:** Pinia
-- **Styling:** Tailwind CSS
-- **Build Tool:** Vite
-- **Icons:** Lucide Vue
-
-### Infrastructure
-- **Containerization:** Docker & Docker Compose
-- **Orchestration:** Single command setup for DB, Backend, and Frontend.
+### **DevOps & Infraestrutura**
+*   **Containerização:** Docker & Docker Compose
+*   **Orquestração:** Ambiente de desenvolvimento unificado (DB, Backend, Frontend)
 
 ---
 
-## 📦 Installation & Setup
+## � O Que é o Projeto?
 
-### Prerequisites
-- Docker & Docker Compose installed on your machine.
+O **Ecx Wallet** é uma plataforma que permite aos usuários gerenciar suas finanças digitais com segurança.
 
-### Quick Start
-1. **Clone the repository:**
+**Funcionalidades Principais:**
+*   🔐 **Autenticação Segura:** Login e cadastro com tokens JWT.
+*   💰 **Gestão de Contas:** Criação automática de contas digitais.
+*   💸 **Transações Financeiras:**
+    *   Depósitos e Saques.
+    *   **Transferências P2P:** Envio de valores entre usuários em tempo real.
+*   📊 **Dashboard Interativo:**
+    *   Visão geral de saldo.
+    *   Gráficos de fluxo de caixa (Entradas vs Saídas).
+    *   Gestão visual de cartões de crédito virtuais.
+    *   Histórico detalhado de atividades com filtros.
+
+---
+
+## 📦 Como Rodar
+
+Pré-requisitos: **Docker** e **Docker Compose**.
+
+1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/your-username/ecx-wallet.git
+   git clone https://github.com/RafaelForti1/Fintech-ECX.git
    cd ecx-wallet
    ```
 
-2. **Start the application:**
+2. **Suba o ambiente:**
    ```bash
    docker compose up --build
    ```
-   *This will build the images, create the database, run migrations, and start the servers.*
 
-3. **Access the application:**
+3. **Acesse:**
    - **Frontend:** [http://localhost:5173](http://localhost:5173)
    - **Backend API:** [http://localhost:3000](http://localhost:3000)
 
-### Default Credentials (Seeds)
+**Credenciais de Teste:**
 - **Admin:** `admin@ecxwallet.com` / `password123`
-- **User:** `user@ecxwallet.com` / `password123`
-
----
-
-## 📐 Architecture Highlights
-
-- **Service Objects:** Complex business logic (like transferring funds) is extracted from controllers into dedicated services (e.g., `TransactionService`), following the Single Responsibility Principle (SRP).
-- **Optimistic UI:** The frontend is designed to provide immediate feedback to users while handling background API synchronizations.
-- **Hybrid Data Mode:** The frontend supports switching between Real API data and Mock data for easier UI development and testing.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- **Usuário:** `user@ecxwallet.com` / `password123`
