@@ -1,0 +1,35 @@
+# General
+.DS_Store
+.vscode/
+.idea/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Docker
+docker-compose.override.yml
+
+# Backend (Rails)
+backend/log/
+backend/tmp/
+backend/db/*.sqlite3
+backend/db/*.sqlite3-journal
+backend/storage/
+backend/public/assets
+backend/public/packs
+backend/public/packs-test
+backend/node_modules/
+backend/coverage/
+backend/.byebug_history
+
+# Frontend (Vue/Vite)
+frontend/node_modules/
+frontend/dist/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.vite/
+frontend/coverage/
